@@ -23,7 +23,7 @@
             
     }
 
-#조건문 
+# 조건문 
     if, else if, else
         false, undefined, null, 0, NaN, the empty string("")을 거짓으로 취급함
     swich
@@ -31,7 +31,7 @@
     삼항연산자
         조건 ? true실행 : false실행;
 
-#기본함수
+# 기본함수
     prompt() 안씀;
         사용자에게 창을 띄울 수 있도록 해줌
         입력받은 값은 string임
@@ -41,36 +41,34 @@
     isNaN()
         boolean으로 알려줌
 
-#typeof
+# typeof
     타입을 볼 수 있음
 
-#null과 undefined의 차이
+# null과 undefined의 차이
     null
         존재하고 값이 있는데 그게 아무것도 아니다
     undefined
         존재하지만, 안에 아무것도 없다
 
-    JavaScript파일에서 HTML element를 가지고 올 수 있다
-        하나의 ex) in the HTML <h1 id="title">Grab me!</h1>
-        const title = document.getElementById("title");
+# Element 가져오기 document.querySelector, querySelectorAll
+        const zz = document.getElementById("title");
         수정도 가능하다
-        title.innerText = "Got you!";
+        zz.innerText = "Got you!";
         읽기도 가능
-        console.log(title.className);
+        console.log(zz.className);
 
-    가져오는 Hot한 방법 document.querySelector, querySelectorAll
-#querySelector
+# querySelector
     element를 CSS방식으로 검색할 수 있음
     단 1개의 element를 찾음
-#querySelectorAll
+# querySelectorAll
     Array형식으로 다 나옴
 
-console.dir()을 해보면 해당 element의 내부를 보여줌
-    기본적으로 object로 표시한 element를 보여줌
-style오브젝트를 이용해서 JavaScript에서 style을 변경할 수 있다.
-    ex) title.style.color ="blue";
+    console.dir()을 해보면 해당 element의 내부를 보여줌
+        기본적으로 object로 표시한 element를 보여줌
+    style오브젝트를 이용해서 JavaScript에서 style을 변경할 수 있다.
+        ex) title.style.color ="blue";
 
-#Events [https://developer.mozilla.org/en-US/docs/Web/API/HTMLHeadingElement] 에서 Element쪽 봐
+# Events [https://developer.mozilla.org/en-US/docs/Web/API/HTMLHeadingElement] 에서 Element쪽 봐
     title.addEventListener("이밴트 오브젝트", 함수명); == title.onclick = handleTitleClick;
         바로 실행할거 아니니까 함수에서 실행()은 빼야해
         나중에 .removeEventListener를 통해서 event listener를 제거할 수 있기 때문에,
@@ -92,8 +90,10 @@ style오브젝트를 이용해서 JavaScript에서 style을 변경할 수 있다
             copy 복사 할 때
             offline 와이파이 off
             online 와이파이 on
-
+            
 1. element를 찾아
 2. event를 listen해라
 3. 그 event에 반응해라
+
+# JavaScript와 HTML, CSS간의 춤사위
     
