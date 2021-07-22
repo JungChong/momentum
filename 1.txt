@@ -1,27 +1,27 @@
-변수
+# 변수
     항상 const, 가끔 let(업데이트 가능), 절대 var
 
-배열
+# 배열
     const 배열명 = [, , , ,] 다양한 자료형이 들어갈 수 있다.
     배열 속에 데이터추가
         배열명.push();
 
-오브젝트
+# 오브젝트
     Create, Update 가능
-const player = {
-    name: "asdasd",
-    ...,
-    ...
-};
-console.log(player.name);
-오브젝트.property(소유물)
-언제든 오브젝트 안의 값을 변경(Update)할 수 있고, 추가 또한 가능하다
+    const player = {
+        name: "asdasd",
+        ...,
+        ...
+    };
+    console.log(player.name);
+    오브젝트.property(소유물)
+    언제든 오브젝트 안의 값을 변경(Update)할 수 있고, 추가 또한 가능하다
 
-() --> function을 실행하는 것
-오브젝트 안에서의 function지정은 아래처럼 해준다.
-sayHello: function(){
-        
-}
+# () --> function을 실행하는 것
+    오브젝트 안에서의 function지정은 아래처럼 해준다.
+    sayHello: function(){
+            
+    }
 
 #조건문 
     if, else if, else
@@ -50,20 +50,50 @@ sayHello: function(){
     undefined
         존재하지만, 안에 아무것도 없다
 
-JavaScript파일에서 HTML element를 가지고 올 수 있다
-    하나의 ex) in the HTML <h1 id="title">Grab me!</h1>
-    const title = document.getElementById("title");
-    수정도 가능하다
-    title.innerText = "Got you!";
-    읽기도 가능
-    console.log(title.className);
+    JavaScript파일에서 HTML element를 가지고 올 수 있다
+        하나의 ex) in the HTML <h1 id="title">Grab me!</h1>
+        const title = document.getElementById("title");
+        수정도 가능하다
+        title.innerText = "Got you!";
+        읽기도 가능
+        console.log(title.className);
 
     가져오는 Hot한 방법 document.querySelector, querySelectorAll
-    #querySelector
-        element를 CSS방식으로 검색할 수 있음
-        단 1개의 element를 찾음
-    #querySelectorAll
-        Array형식으로 다 나옴
+#querySelector
+    element를 CSS방식으로 검색할 수 있음
+    단 1개의 element를 찾음
+#querySelectorAll
+    Array형식으로 다 나옴
 
-#Events
+console.dir()을 해보면 해당 element의 내부를 보여줌
+    기본적으로 object로 표시한 element를 보여줌
+style오브젝트를 이용해서 JavaScript에서 style을 변경할 수 있다.
+    ex) title.style.color ="blue";
+
+#Events [https://developer.mozilla.org/en-US/docs/Web/API/HTMLHeadingElement] 에서 Element쪽 봐
+    title.addEventListener("이밴트 오브젝트", 함수명); == title.onclick = handleTitleClick;
+        바로 실행할거 아니니까 함수에서 실행()은 빼야해
+        나중에 .removeEventListener를 통해서 event listener를 제거할 수 있기 때문에,
+        addEventListener를 더 선호
+        대표적인 ex)
+            click 클릭할 때
+            mouseenter 마우스가 위를 지날 때
+            mouseleave 마우스가 벗어날 때
+    모든 event들을 JavaScript는 listen할 수 있음
+    console.dir()로 출력한 오브젝트들 중 on붙은놈들이 이벤트인데 on을 빼고 사용하면 됨
+    document의 body,head,title 이런것들은 중요하기 때문에
+    document.body.style~의 명령이 허용되지만, div같은것들은 호출이 안됨
+    나머지 element들은 querySelector나 getElementById로 불러와야됨!!!!!!!
+
+    #window Events [https://developer.mozilla.org/en-US/docs/Web/API/Window]
+    window.addEventListener("이밴트 오브젝트", 함수명);
+        대표적인 ex)
+            resize 브라우저 사이즈 바뀜
+            copy 복사 할 때
+            offline 와이파이 off
+            online 와이파이 on
+
+1. element를 찾아
+2. event를 listen해라
+3. 그 event에 반응해라
     
