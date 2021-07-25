@@ -1,15 +1,9 @@
-const h1 = document.querySelector(".hello h1");
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
 
-function handleh1Click() {
-  const currentColor = h1.style.color;
-  let newColor;
-  if (currentColor === "blue") {
-    newColor = "tomato";
-  } else {
-    newColor = "blue";
-  }
-  console.log(newColor);
-  h1.style.color = newColor;
+function onLoginBtnClick() {
+  const username = loginInput.value;
+  console.log(username);
 }
 
-h1.addEventListener("click", handleh1Click);
+loginButton.addEventListener("click", onLoginBtnClick);

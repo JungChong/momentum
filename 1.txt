@@ -96,4 +96,17 @@
 3. 그 event에 반응해라
 
 # JavaScript와 HTML, CSS간의 춤사위
+# toggle
+    h1.classList.toggle("active");
+        h1의 classList에 clicked class가 이미 있는지 확인해서 있으면 remove, 없으면 add해주는 모듈
+  const clickedClass = "active";
+  if (h1.classList.contains(clickedClass)) {
+    h1.classList.remove(clickedClass);
+  } else {
+    h1.classList.add(clickedClass);
+  }
+  이 긴 코드가
+  h1.classList.toggle("active"); 한줄로 정리가능
+
+input의 유효성 검사를 작동시키기 위해서는 input이 form안에 있어야한다
     
