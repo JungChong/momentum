@@ -109,4 +109,30 @@
   h1.classList.toggle("active"); 한줄로 정리가능
 
 input의 유효성 검사를 작동시키기 위해서는 input이 form안에 있어야한다
-    
+
+
+우리가 이벤트를 발생시킬 때 브라우저가 나의 function을 호출하게 되는데
+function의()안에 argument를 주면 추가적인 정보를 가진 채로 호출하게 된다.
+    예를들어 브라우저는 기본 동작을 가지고있다.
+    function(event)안에 event.preventDefault();를 추가하면
+    어떤 event의 기본 행동을 발생되지 않도록 막는다
+    예를들면 submit을 하면 창이 새로고침되는 것 등이다.
+이처럼 우리가 argument공간만 제공하면 JS가 알아서 방금 일어난 event에 대한 정보를 지닌
+argument를 채워 넣는다
+
+# form의 기본 동작은 submit
+# a의 기본 동작은 클릭 시 다른 페이지로 넘어가는 것
+
+이밴트안에 함수는 내가 실행시키는게 아니라 브라우저가 해주는 것이다
+함수에 공간을 주면 브라우저는 실행만 시켜주는게 아니라 event에 대한 정보도 담아준다
+다양한 함수또한 사용가능한대 그 예로, preventDefault 등이 있다
+
+css 
+# display: none; 화면에서 사라지게함
+
+일반적으로 string만 포함된 변수는 대문자로 표기함
+
+
+# 백틱
+    변수가 string일 경우
+    "Hello " + username; === `Hello ${username}`;
